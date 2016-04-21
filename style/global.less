@@ -1,11 +1,16 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
 // Preloader
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     #preloader {
         z-index: 1;
     }
     
     #preloader-circle {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         margin-top: -150px;
@@ -20,22 +25,45 @@
     }
     .preloader {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 50%;
-        background: @dark-bg;
+        background: transparent;
         .transition;
     }
 
     #preloader-left {
         left: 0;
+        top: 0;
+	    border-top: 100vh solid @grey-bg;
+	    border-right: 100vw solid transparent;
     }
 
     #preloader-right {
         right: 0;
+        bottom: 0;
+        border-left: 100vw solid transparent;
+	    border-bottom: 100vh solid @grey-bg;
     }
 
     .preloader-hide {
         width: 0;
     }
 }
+
+// Particles bg for hero
+canvas {
+    display: block;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: @dark-bg;
+}
+
+#particles-xs {
+    background-image: url(../img/particles.png);
+}
+    
