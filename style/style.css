@@ -6,7 +6,7 @@
   transition: 0.5s ease;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   outline: none;
 }
 .container {
@@ -30,7 +30,7 @@ body {
   }
   .preloader {
     z-index: 9;
-    position: absolute;
+    position: fixed;
     background: transparent;
     transition: 0.8s ease-out;
   }
@@ -54,13 +54,13 @@ canvas {
   display: block;
 }
 .particles {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   background: #28292f;
+  z-index: -1;
 }
 .particles span {
   position: absolute;
@@ -68,9 +68,6 @@ canvas {
   height: 100%;
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0) 100%);
   top: -50%;
-}
-#particles-xs {
-  background-image: url(../img/particles.png);
 }
 .logo {
   padding-top: 20px;
@@ -94,7 +91,7 @@ canvas {
   }
 }
 .card ul {
-  width: 400px;
+  width: 420px;
   float: left;
   margin: 0;
   padding: 0;
@@ -116,4 +113,112 @@ canvas {
 }
 .card a:hover {
   color: #ffffff;
+}
+#hero {
+  color: #ffffff;
+  padding-bottom: 30%;
+  background-color: #28292f;
+  background-image: url(../img/particles.png);
+}
+@media only screen and (min-width: 768px) {
+  #hero {
+    background-image: none;
+    background: none;
+  }
+}
+.letscode {
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .letscode {
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+.letscode h1 {
+  font-size: 40px;
+  margin-top: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .letscode h1 {
+    font-size: 60px;
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .letscode h1 {
+    font-size: 80px;
+    margin-top: 120px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .letscode h1 {
+    font-size: 100px;
+    margin-top: 160px;
+  }
+}
+.letscode p {
+  color: #999999;
+  font-size: 10px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .letscode p {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .letscode p {
+    font-size: 14px;
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .letscode p {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+}
+.letscode a {
+  color: #ffffff;
+  line-height: 38px;
+  font-size: 14px;
+  display: block;
+  width: 150px;
+  height: 38px;
+  background: #3793ee;
+  margin: 30px auto 0 auto;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.5s ease;
+}
+@media only screen and (min-width: 768px) {
+  .letscode a {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .letscode a {
+    margin-left: 0;
+    margin-top: 60px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .letscode a {
+    margin-top: 70px;
+  }
+}
+.letscode a:hover {
+  color: #3793ee;
+  background: #ffffff;
+}
+#aboutme {
+  background: #ffffff;
+  height: 4000px;
+  width: 100%;
 }

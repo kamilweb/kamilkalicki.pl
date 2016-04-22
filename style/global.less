@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     outline: none;
 }
 
@@ -27,7 +27,7 @@ body {
     }
     .preloader {
         z-index: 9;
-        position: absolute;
+        position: fixed;
         background: transparent;
         .transition;
     }
@@ -57,13 +57,13 @@ canvas {
 }
 
 .particles {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     background: @dark-bg;
+    z-index: -1;
     span {
         position: absolute;
         width: 100%;
@@ -73,11 +73,7 @@ canvas {
     }
 }
 
-#particles-xs {
-    background-image: url(../img/particles.png);
-}
-
-// Hero
+// Hero top
 .logo {
     padding-top: 20px;
     text-align: center;
@@ -96,7 +92,7 @@ canvas {
         font-size: 16px;
     }
     ul {
-        width: 400px;
+        width: 420px;
         float: left;
         margin: 0;
         padding: 0;
@@ -121,4 +117,94 @@ canvas {
     }
 }
 
+// Hero bottom
+#hero {
+    color: @white;
+    padding-bottom: 30%;
+    background-color: @dark-bg;
+    background-image: url(../img/particles.png);
+    @media @small {
+        background-image: none;
+        background: none;
+    }
+}
+
+.letscode {
+    text-align: center;
+    @media @medium {
+        text-align: left;
+        padding-left: 30px;
+    }
+    h1 {
+        font-size: 40px;
+        margin-top: 80px;
+        @media @small {
+            font-size: 60px;
+            margin-top: 100px;
+        }
+        @media @medium {
+            font-size: 80px;
+            margin-top: 120px;
+        }
+        @media @large {
+            font-size: 100px;
+            margin-top: 160px;
+        }
+    }
+    p {
+        color: darken(@white, 40%);
+        font-size: 10px;
+        margin-top: 20px;
+        @media @small {
+            font-size: 12px;
+            margin-top: 30px;
+        }
+        @media @medium {
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        @media @large {
+            font-size: 16px;
+            margin-top: 50px;
+        }
+    }
+    a {
+        color: @white;
+        line-height: 38px;
+        font-size: 14px;
+        display: block;
+        width: 150px;
+        height: 38px;
+        background: @blue;
+        margin: 30px auto 0 auto;
+        text-decoration: none;
+        text-align: center;
+        .transition-fast;
+        @media @small {
+            margin-top: 50px;
+        }
+        @media @medium {
+            margin-left: 0;
+            margin-top: 60px;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+        }
+        @media @large {
+            margin-top: 70px;
+        }
+        &:hover {
+            color: @blue;
+            background: @white;
+        }
+    }
+}
+
+// About me
+#aboutme {
+    background: @white;
+    height: 4000px;
+    width: 100%;
+}
  
