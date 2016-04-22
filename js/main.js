@@ -5,13 +5,6 @@ $(document).ready(function(){
     
     setTimeout(function(){
         $('.preloader').addClass('preloader-hide');
-        $('#preloader-left').css('left', '-100%'); 
-        $('#preloader-right').css('border-width', '0');   
+        $('#preloader-left, #preloader-right').css('border-width', '0');   
     }, 500);
-    
-    setTimeout(function(){
-        $('#preloader-left, #preloader-right').hide();
-    },1300);
-    
-    
 });

@@ -3,11 +3,13 @@ body {
     outline: none;
 }
 
+.container {
+    max-width: 1400px;
+    width: 100%;
+}
+
 // Preloader
-@media only screen and (min-width: 769px) {
-    #preloader {
-        z-index: 1;
-    }
+@media @small {
     
     #preloader-circle {
         position: fixed;
@@ -19,11 +21,12 @@ body {
         height: 300px;
         background: rgba(55,147,238,1);
         background: radial-gradient(ellipse at center, rgba(161,204,247,1) 0%, rgba(55,147,238,1) 100%);
-        z-index: 1;
+        z-index: 99;
         border-radius: 50%;
         transition: 0.5s ease;
     }
     .preloader {
+        z-index: 9;
         position: absolute;
         background: transparent;
         .transition;
@@ -61,9 +64,61 @@ canvas {
     height: 100%;
     z-index: -1;
     background: @dark-bg;
+    span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 46%, rgba(255,255,255,0) 100%);
+        top: -50%;
+    }
 }
 
 #particles-xs {
     background-image: url(../img/particles.png);
 }
-    
+
+// Hero
+.logo {
+    padding-top: 20px;
+    text-align: center;
+    @media @medium {
+        padding: 50px 0 0 30px;
+        text-align: left;
+    }
+}
+
+.card {
+    font-size: 12px;
+    margin-top: 52px;
+    text-transform: uppercase;
+    @media @small {
+        margin-top: 82px;
+        font-size: 16px;
+    }
+    ul {
+        width: 400px;
+        float: left;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            color: @white;
+            margin: 0 0 20px 20px;
+        }
+        li:nth-child(3) {
+            text-transform: none;
+        }
+    }
+    a {
+        color: @blue;
+        text-decoration: none;
+        .transition-fast;
+        font-size: 24px;
+        margin-right: 5px;
+        &:hover {
+            color: @white;
+        }
+    }
+}
+
+ 
