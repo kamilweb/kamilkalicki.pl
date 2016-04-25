@@ -12,7 +12,7 @@ $(document).ready(function(){
         event.preventDefault();
     });
     
-    $('#arrow-down, #check').click(function(){
+    $('#arrow-down, #check-out').click(function(){
         $('body').animate({ scrollTop: heroHeight}, 1000);
     });
     

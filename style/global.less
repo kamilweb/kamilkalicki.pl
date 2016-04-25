@@ -1,6 +1,9 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    .montserrat;
     outline: none;
+    p, a {
+        .lato;
+    }
 }
 
 .container {
@@ -157,24 +160,24 @@ canvas {
     }
     p {
         color: darken(@white, 40%);
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 20px;
         @media @small {
-            font-size: 12px;
+            font-size: 14px;
             margin-top: 10px;
         }
         @media @medium {
-            font-size: 14px;
+            font-size: 16px;
             margin-top: 20px;
         }
         @media @large {
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 30px;
         }
     }
 }
 
-#check {
+#check-out {
         color: @white;
         position: relative;
         bottom: 15%;
@@ -205,6 +208,7 @@ canvas {
         &:hover {
             color: @blue;
             background: transparent;
+            z-index: 1;
         }
         &:after {
             content: '';
@@ -240,7 +244,86 @@ canvas {
 // About me
 #about-me {
     background: @white;
-    height: 4000px;
-    width: 100%;
+    position: relative;
+    height: 654px;
+    overflow: hidden;
+    @media @medium {
+        height: 1108px;
+    }
+}
+
+.section-header {
+    margin-top: 50px;
+    text-align: center;
+    @media @medium {
+        margin-top: 83px;
+    }
+    
+}
+
+#about-me-header-bg {
+    text-transform: uppercase;
+    color: @grey-header;
+    overflow: hidden;
+    padding: 0;
+    padding-left: 10%;
+    position: absolute;
+    right: -50%;
+    top: 85px;
+    @media @small {
+        top: 78px;
+    }
+    @media @large {
+        top: 100px;
+    }
+    h1 {
+        font-size: 140px;
+        letter-spacing: 20px;
+        margin: 0;
+        @media @small {
+            font-size: 180px;
+            letter-spacing: 27px;
+        }
+        @media @large {
+            font-size: 220px;
+            letter-spacing: 34px;
+        }
+    }
+}
+
+#about-me-tablet {
+    position: absolute;
+    width: 168px;
+    height: 238px;
+    z-index: 1;
+    border: 16px solid @grey-header;
+    top: 170px;
+    left: 10%;
+    box-shadow: 0px 0px 30px -14px rgba(0,0,0,1);
+    @media only screen and (max-width: 500px) {
+        top: 240px;
+    }
+    @media @small {
+        left: 20%;
+    }
+    @media @medium {
+        left: 10%;
+        width: 336px;
+        height: 476px;
+        top: 230px;
+        border: 32px solid @grey-header;
+    }
+    @media @large {
+        left: 15%;
+    }
+}
+
+#about-me-grey-bg {
+    background: @grey-bg;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 50%;
 }
  
