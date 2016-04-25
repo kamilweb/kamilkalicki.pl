@@ -119,17 +119,21 @@ canvas {
 
 // Hero bottom
 #hero {
+    position: relative;
     color: @white;
     padding-bottom: 30%;
     background-color: @dark-bg;
     background-image: url(../img/particles.png);
     @media @small {
         background-image: none;
-        background: none;
+        background: transparent;
+    }
+    @media @medium {
+        padding-bottom: 20%;
     }
 }
 
-.letscode {
+.lets-code {
     text-align: center;
     @media @medium {
         text-align: left;
@@ -140,7 +144,7 @@ canvas {
         margin-top: 80px;
         @media @small {
             font-size: 60px;
-            margin-top: 100px;
+            margin-top: 120px;
         }
         @media @medium {
             font-size: 80px;
@@ -157,19 +161,23 @@ canvas {
         margin-top: 20px;
         @media @small {
             font-size: 12px;
-            margin-top: 30px;
+            margin-top: 10px;
         }
         @media @medium {
             font-size: 14px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         @media @large {
             font-size: 16px;
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
-    a {
+}
+
+#check {
         color: @white;
+        position: relative;
+        bottom: 15%;
         line-height: 38px;
         font-size: 14px;
         display: block;
@@ -181,28 +189,56 @@ canvas {
         text-align: center;
         .transition-fast;
         @media @small {
-            margin-top: 50px;
+            margin-top: 30px;
         }
         @media @medium {
             margin-left: 0;
-            margin-top: 60px;
+            margin-top: 40px;
             width: 200px;
             height: 50px;
             line-height: 50px;
             font-size: 18px;
         }
         @media @large {
-            margin-top: 70px;
+            margin-top: 50px;
         }
         &:hover {
             color: @blue;
+            background: transparent;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            z-index: -1;
+            .transition-fast;
+        }
+        &:hover:after {
+            width: 100%;
             background: @white;
         }
+    }
+
+#arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    font-size: 30px;
+    margin-left: -10px;
+    cursor: pointer;
+    display: block;
+    color: @white;
+    .transition;
+    @media @large {
+        bottom: 13%;
     }
 }
 
 // About me
-#aboutme {
+#about-me {
     background: @white;
     height: 4000px;
     width: 100%;

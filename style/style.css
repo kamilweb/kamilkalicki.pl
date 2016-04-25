@@ -115,6 +115,7 @@ canvas {
   color: #ffffff;
 }
 #hero {
+  position: relative;
   color: #ffffff;
   padding-bottom: 30%;
   background-color: #28292f;
@@ -123,65 +124,72 @@ canvas {
 @media only screen and (min-width: 768px) {
   #hero {
     background-image: none;
-    background: none;
+    background: transparent;
   }
 }
-.letscode {
+@media only screen and (min-width: 992px) {
+  #hero {
+    padding-bottom: 20%;
+  }
+}
+.lets-code {
   text-align: center;
 }
 @media only screen and (min-width: 992px) {
-  .letscode {
+  .lets-code {
     text-align: left;
     padding-left: 30px;
   }
 }
-.letscode h1 {
+.lets-code h1 {
   font-size: 40px;
   margin-top: 80px;
 }
 @media only screen and (min-width: 768px) {
-  .letscode h1 {
+  .lets-code h1 {
     font-size: 60px;
-    margin-top: 100px;
+    margin-top: 120px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .letscode h1 {
+  .lets-code h1 {
     font-size: 80px;
     margin-top: 120px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .letscode h1 {
+  .lets-code h1 {
     font-size: 100px;
     margin-top: 160px;
   }
 }
-.letscode p {
+.lets-code p {
   color: #999999;
   font-size: 10px;
   margin-top: 20px;
 }
 @media only screen and (min-width: 768px) {
-  .letscode p {
+  .lets-code p {
     font-size: 12px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .letscode p {
+  .lets-code p {
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .letscode p {
+  .lets-code p {
     font-size: 16px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
-.letscode a {
+#check {
   color: #ffffff;
+  position: relative;
+  bottom: 15%;
   line-height: 38px;
   font-size: 14px;
   display: block;
@@ -194,14 +202,14 @@ canvas {
   transition: 0.5s ease;
 }
 @media only screen and (min-width: 768px) {
-  .letscode a {
-    margin-top: 50px;
+  #check {
+    margin-top: 30px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .letscode a {
+  #check {
     margin-left: 0;
-    margin-top: 60px;
+    margin-top: 40px;
     width: 200px;
     height: 50px;
     line-height: 50px;
@@ -209,15 +217,45 @@ canvas {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .letscode a {
-    margin-top: 70px;
+  #check {
+    margin-top: 50px;
   }
 }
-.letscode a:hover {
+#check:hover {
   color: #3793ee;
+  background: transparent;
+}
+#check:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+#check:hover:after {
+  width: 100%;
   background: #ffffff;
 }
-#aboutme {
+#arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  font-size: 30px;
+  margin-left: -10px;
+  cursor: pointer;
+  display: block;
+  color: #ffffff;
+  transition: 0.8s ease-out;
+}
+@media only screen and (min-width: 1200px) {
+  #arrow-down {
+    bottom: 13%;
+  }
+}
+#about-me {
   background: #ffffff;
   height: 4000px;
   width: 100%;
