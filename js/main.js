@@ -26,4 +26,16 @@ $(document).ready(function(){
     $('#arrow-down, #check-out').click(function(){
         $('body').animate({ scrollTop: $('#about-me').offset().top + 1}, 1000);
     });
+    
+    // Owl carousel
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTime: 3000,
+        margin: 20,
+        autoWidth: true,
+        center: 1,
+        dots: false,
+        nav: false
+    });
 });

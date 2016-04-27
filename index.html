@@ -40,26 +40,30 @@
     <!-- Hero -->
     <section id="hero">
         <div class="container">
-            <div class="row">
-                <div class="logo col-xs-12 col-md-5">
-                    <img src="img/logo.png" alt="logo">
+            <header>
+                <div class="row">
+                    <div class="logo col-xs-12 col-md-5">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <div class="card hidden-xs hidden-sm col-md-5 pull-right">
+                        <ul class="pull-right">
+                            <li>Kamil Kalicki</li>
+                            <li>Front-end developer</li>
+                            <li><a class="inactive-a" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>   kmlkalicki@gmail.com</li>
+                            <li>+48 791 919 917</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card hidden-xs hidden-sm col-md-5 pull-right">
-                    <ul class="pull-right">
-                        <li>Kamil Kalicki</li>
-                        <li>Front-end developer</li>
-                        <li><a class="inactive-a" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>   kmlkalicki@gmail.com</li>
-                        <li>+48 791 919 917</li>
-                    </ul>
-                </div>
-            </div>
+            </header>
             
             <!-- Hero CTA -->
             <div class="row">
                 <div class="lets-code col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0">
-                    <h1>Let's code!</h1>
-                    <p>Szukasz kogoś, kto stworzy Ci świetnie wyglądającą <br>stronę internetową, która będzie idealnie<br> dopasowywać się do wielkości ekranu urządzenia?<br> Jeśli tak, to dobrze trafiłeś!</p>
-                    <a id="check-out" class="inactive-a" href="">Sprawdź</a>
+                    <article>
+                        <h1>Let's code!</h1>
+                        <p>Szukasz kogoś, kto stworzy Ci świetnie wyglądającą <br>stronę internetową, która będzie idealnie<br> dopasowywać się do wielkości ekranu urządzenia?<br> Jeśli tak, to dobrze trafiłeś!</p>
+                        <a id="check-out" class="inactive-a" href="">Sprawdź</a>
+                    </article>
                 </div>
             </div>
         </div>
@@ -99,8 +103,20 @@
         <div id="about-me-grey-bg">
             <div class="container">
                 <div class="row">
-                    <div class="slider-box col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1"></div>
-                    <div id="foto" class="slider-box col-xs-8 col-xs-offset-2 col-sm-4"></div>
+                    <div class="slider-box col-xs-10 col-xs-offset-1 col-sm-5 col-md-offset-1">
+                        <ul class="owl-carousel">
+                            <li><img src="img/slider-svgs/html.svg" alt="html"></li>
+                            <li><img src="img/slider-svgs/css.svg" alt="css"></li>
+                            <li><img src="img/slider-svgs/bootstrap.svg" alt="bootstrap"></li>
+                            <li class="center-slide"><img src="img/slider-svgs/less.svg" alt="less"></li>
+                            <li class="center-slide"><img src="img/slider-svgs/sass.svg" alt="sass"></li>
+                            <li class="center-slide"><img src="img/slider-svgs/jquery.svg" alt="jquery"></li>
+                            <li><img src="img/slider-svgs/git.svg" alt="git"></li>
+                            <li><img src="img/slider-svgs/github.svg" alt="github"></li>
+                            <li><img src="img/slider-svgs/photoshop.svg" alt="photoshop"></li>
+                        </ul>
+                    </div>
+                    <div id="foto" class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1"></div>
                 </div>
             </div>
         </div>
@@ -114,6 +130,7 @@
     <!-- Particles js-->
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <!-- Main js -->
     <script src="js/main.js"></script>
 </body>

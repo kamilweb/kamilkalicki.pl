@@ -38,15 +38,15 @@ body {
     #preloader-left {
         left: 0;
         top: 0;
-	    border-top: 100vh solid @grey-bg;
-	    border-right: 100vw solid transparent;
+	    border-top: 101vh solid @grey-bg;
+	    border-right: 101vw solid transparent;
     }
 
     #preloader-right {
         right: 0;
         bottom: 0;
-        border-left: 100vw solid transparent;
-	    border-bottom: 100vh solid @grey-bg;
+        border-left: 101vw solid transparent;
+	    border-bottom: 101vh solid @grey-bg;
     }
 
     .preloader-hide {
@@ -389,10 +389,29 @@ canvas {
 }
 
 .slider-box {
-    height: 100px;
-    background: @blue;
-    margin-top: 160px;
+    height: 140px;
+    margin-top: 220px;
+    padding: 6px 0;
+    box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
     @media @medium {
-        margin-top: 20%;
+        margin-top: 250px;
     }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            cursor: pointer;
+            position: relative;
+        }
+    }
+}
+
+.owl-carousel {
+    height: 128px;
+}
+
+.center-slide {
+    margin-top: 50%;
+    transform: translateY(-50%);
 }
