@@ -1,8 +1,8 @@
 body {
     .montserrat;
-    outline: none;
     p, a {
         .lato;
+        outline: none;
     }
 }
 
@@ -32,7 +32,6 @@ body {
         z-index: 9;
         position: fixed;
         background: transparent;
-        .transition;
     }
 
     #preloader-left {
@@ -40,6 +39,7 @@ body {
         top: 0;
 	    border-top: 101vh solid @grey-bg;
 	    border-right: 101vw solid transparent;
+        .transition;
     }
 
     #preloader-right {
@@ -47,12 +47,13 @@ body {
         bottom: 0;
         border-left: 101vw solid transparent;
 	    border-bottom: 101vh solid @grey-bg;
-    }
-
-    .preloader-hide {
-        width: 0;
+        .transition;
     }
     
+    .preloader-hide {
+        border-width: 0 !important;
+    }
+
     #logo-box {
         position: fixed;
         top: 20%;
@@ -216,6 +217,7 @@ canvas {
 }
 
 #check-out {
+        .lato;
         color: @white;
         position: relative;
         bottom: 15%;
@@ -228,6 +230,8 @@ canvas {
         margin: 30px auto 0 auto;
         text-decoration: none;
         text-align: center;
+        outline: none;
+        border: none;
         .transition-fast;
         @media @small {
             margin-top: 30px;
@@ -256,6 +260,7 @@ canvas {
             width: 0;
             height: 100%;
             z-index: -1;
+            border: none;
             .transition-fast;
         }
         &:hover:after {
@@ -283,7 +288,7 @@ canvas {
 #about-me {
     background: @white;
     position: relative;
-    height: 1000px;
+    height: 1200px;
     overflow: hidden;
     @media @small {
         height: 800px;
@@ -390,9 +395,12 @@ canvas {
 
 .slider-box {
     height: 140px;
-    margin-top: 220px;
+    margin-top: 40px;
     padding: 6px 0;
     box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
+    @media @small {
+        margin-top: 160px;
+    }
     @media @medium {
         margin-top: 250px;
     }
@@ -401,7 +409,7 @@ canvas {
         margin: 0;
         list-style: none;
         li {
-            cursor: pointer;
+            cursor: grab;
             position: relative;
         }
     }
@@ -414,4 +422,24 @@ canvas {
 .center-slide {
     margin-top: 50%;
     transform: translateY(-50%);
+}
+
+.foto {
+    margin-top: 220px;
+    @media only screen and (min-width: 400px) and (max-width: 700px) {
+        margin-top: 140px;
+    }
+    @media only screen and (min-width: 701px) {
+        margin-top: 100px;
+    }
+    img {
+        box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
+        width: 100%;
+        @media @small {
+            width: 300px;
+        }
+        @media @medium {
+            width: 400px;
+            }
+        }
 }

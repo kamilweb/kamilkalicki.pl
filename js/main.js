@@ -11,8 +11,7 @@ $(document).ready(function(){
     }, 500);
     
     setTimeout(function(){
-        $('.preloader').addClass('preloader-hide');
-        $('#preloader-left, #preloader-right').css('border-width', '0');
+        $('#preloader-left, #preloader-right').addClass('preloader-hide');
         $('#logo-box').hide();
     }, 1000);
     
