@@ -18,8 +18,8 @@ $(document).ready(function(){
     
     // Main
     
-    $('.inactive-a').click(function(){
-        event.preventDefault();
+    $('i#msg-icon').click(function(){
+        $('body').animate({ scrollTop: $('#lets-work').offset().top}, 1000);
     });
     
     $('#arrow-down, #check-out').click(function(){
@@ -36,5 +36,14 @@ $(document).ready(function(){
         center: 1,
         dots: false,
         nav: false
+    });
+    
+    // Let's work together
+    $('#msg-form').submit(function(){
+        if(($('#email').val() == "") || ($('textarea').val() == "") || ($('#name').val() == "") || ($('#phone').val() == ""))
+        {
+            alert("Uzupełnij wymagane pola");
+            return false;
+        }
     });
 });

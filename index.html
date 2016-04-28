@@ -35,10 +35,11 @@
     </section>
     
     <!-- Particles background -->
-    <div id="particles-js" class="particles hidden-xs"><span></span></div>
+    <div id="particles-js" class="particles hidden-xs"></div>
     
     <!-- Hero -->
     <section id="hero">
+        <span></span>
         <div class="container">
             <header>
                 <div class="row">
@@ -49,7 +50,7 @@
                         <ul class="pull-right">
                             <li>Kamil Kalicki</li>
                             <li>Front-end developer</li>
-                            <li><a class="inactive-a" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>   kmlkalicki@gmail.com</li>
+                            <li><i id="msg-icon" class="fa fa-envelope-o" aria-hidden="true"></i>kmlkalicki@gmail.com</li>
                             <li>+48 791 919 917</li>
                         </ul>
                     </div>
@@ -131,9 +132,33 @@
     <section id="social-links">
         <div class="container">
             <div class="row">
-                <div class="social-link col-xs-4"><a target="_blank" href=""><i class="fa fa-facebook-official" aria-hidden="true"></i><span></span><p class="social-link-p">Facebook <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a></div>
-                <div class="social-link col-xs-4"><a id="github-link" target="_blank" href=""><i class="fa fa-github" aria-hidden="true"></i><span></span><p class="social-link-p">Github <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a></div>
+                <div class="social-link col-xs-4"><a target="_blank" href="https://www.facebook.com/kamil.kalicki.3"><i class="fa fa-facebook-official" aria-hidden="true"></i><span></span><p class="social-link-p">Facebook <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a></div>
+                <div class="social-link col-xs-4"><a id="github-link" target="_blank" href="https://github.com/kamilweb"><i class="fa fa-github" aria-hidden="true"></i><span></span><p class="social-link-p">Github <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a></div>
                 <div class="social-link col-xs-4"><a target="_blank" href=""><i class="fa fa-linkedin" aria-hidden="true"></i><span></span><p class="social-link-p">Linkedin <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Let's work together -->
+    <section id="lets-work">
+        <span></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <header class="section-header">
+                        <img class="img-responsive center-block" src="img/lets-work.png" alt="Współpraca">
+                    </header>
+                 </div>
+            </div>
+            <div class="row">
+                <form id="msg-form" method="post">
+                    <input id="name" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-2" type="text" placeholder="Imię i nazwisko">
+                    <input id="email" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-1" type="email" placeholder="E-mail">
+                    <input id="phone" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-1" type="tel" placeholder="Numer telefonu">
+                    <input id="topic" class="msg-input col-xs-8 col-xs-offset-2" type="text" placeholder="Temat">
+                    <textarea class="col-xs-8 col-xs-offset-2" placeholder="Wiadomość"></textarea>
+                    <input id="form-btn" type="submit" class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5" value="Wyślij">
+                </form>
             </div>
         </div>
     </section>

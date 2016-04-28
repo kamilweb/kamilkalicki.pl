@@ -4,6 +4,9 @@ body {
         .lato;
         outline: none;
     }
+    form {
+        .lato;
+    }
 }
 
 .container {
@@ -106,13 +109,6 @@ canvas {
     height: 100%;
     background: @dark-bg;
     z-index: -1;
-    span {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 46%, rgba(255,255,255,0) 100%);
-        top: -50%;
-    }
 }
 
 // Hero top
@@ -147,15 +143,17 @@ canvas {
             text-transform: none;
         }
     }
-    a {
-        color: @blue;
-        text-decoration: none;
-        .transition-fast;
-        font-size: 24px;
-        margin-right: 5px;
-        &:hover {
-            color: @white;
-        }
+}
+
+#msg-icon {
+    color: @blue;
+    text-decoration: none;
+    .transition-fast;
+    font-size: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+    &:hover {
+        color: @white;
     }
 }
 
@@ -166,6 +164,13 @@ canvas {
     padding-bottom: 30%;
     background-color: @dark-bg;
     background-image: url(../img/particles.png);
+    span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 46%, rgba(255,255,255,0) 100%);
+        top: -50%;
+    }
     @media @small {
         background-image: none;
         background: transparent;
@@ -267,7 +272,7 @@ canvas {
             width: 100%;
             background: @white;
         }
-    }
+}
 
 #arrow-down {
     position: absolute;
@@ -301,6 +306,7 @@ canvas {
 .section-header {
     margin-top: 50px;
     text-align: center;
+    
     @media @medium {
         margin-top: 83px;
     }
@@ -450,7 +456,9 @@ canvas {
 // Social links
 #social-links {
     background: @grey-bg;
+    position: relative;
     padding-top: 40px;
+    z-index: 1;
     @media only screen and (max-width: 570px) {
         margin-top: -20%;
     }
@@ -520,5 +528,93 @@ canvas {
             margin-left: 8px;
             font-size: 12px;
         }
+    }
+}
+
+// Let's work section
+#lets-work {
+    background: @dark-bg;
+    position: relative;
+    form {
+        margin-top: 60px;
+    }
+    span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 46%, rgba(255,255,255,0) 100%);
+        top: -50%;
+    }
+    
+    .msg-input, textarea {
+        background: @dark-bg;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        color: @white;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-bottom: 1px solid @form-grey;
+        &:focus {
+            color: @white;
+            border-bottom: 1px solid @blue;
+            font-weight: normal;
+        }
+    }
+    .msg-input {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    padding: 10px !important;
+}
+
+input::-webkit-input-placeholder {
+color: @form-grey;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: @form-grey;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: @form-grey;  
+}
+ 
+input:-ms-input-placeholder {  
+color: @form-grey;  
+}
+
+textarea::-webkit-input-placeholder {
+color: @form-grey;
+}
+ 
+textarea:-moz-placeholder { /* Firefox 18- */
+color: @form-grey;  
+}
+ 
+textarea::-moz-placeholder {  /* Firefox 19+ */
+color: @form-grey;  
+}
+ 
+textarea:-ms-input-placeholder {  
+color: @form-grey;  
+}
+
+#form-btn {
+    color: @white;
+    background: @blue;
+    border: none;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    .transition-fast;
+    &:hover {
+        background: @white;
+        color: @blue;
     }
 }
