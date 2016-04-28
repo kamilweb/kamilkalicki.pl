@@ -432,6 +432,9 @@ canvas {
     @media only screen and (min-width: 701px) {
         margin-top: 100px;
     }
+    @media only screen and (min-width: 850px) and (max-width: 991px) {
+        margin-top: 80px;
+    }
     img {
         box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
         width: 100%;
@@ -442,4 +445,80 @@ canvas {
             width: 400px;
             }
         }
+}
+
+// Social links
+#social-links {
+    background: @grey-bg;
+    padding-top: 40px;
+    @media only screen and (max-width: 570px) {
+        margin-top: -20%;
+    }
+}
+
+.social-link {
+    padding: 0;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+    font-size: 26px;
+    text-align: center;
+    @media @small {
+        height: 220px;
+        line-height: 220px;
+        font-size: 50px;
+    }
+    background: #43609c;
+    &:nth-child(2) {
+        background: #dae2f7;
+    }
+    &:nth-child(3) {
+        background: #177eb8;
+    }
+    a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: @white;
+        .transition-fast;
+        &:hover {
+            color: @blue;
+            background: @white;
+        }
+        span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.01) 46%, rgba(255,255,255,0) 100%);
+            top: -50%;
+            left: 0;
+        }
+    }
+}
+
+#github-link {
+    color: #5e227f;
+    &:hover {
+        color: @blue;
+    }
+}
+
+.social-link-p {
+    display: none;
+    @media @small {
+        display: inline;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 10px;
+        line-height: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        i {
+            margin-left: 8px;
+            font-size: 12px;
+        }
+    }
 }
