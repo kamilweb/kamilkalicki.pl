@@ -18,12 +18,14 @@ $(document).ready(function(){
     
     // Main
     
+    
+    
     $('i#msg-icon').click(function(){
-        $('body').animate({ scrollTop: $('#lets-work').offset().top}, 1000);
+        $('html, body').animate({ scrollTop: $('#lets-work').offset().top}, 1000);
     });
     
     $('#arrow-down, #check-out').click(function(){
-        $('body').animate({ scrollTop: $('#about-me').offset().top + 1}, 1000);
+        $('html, body').animate({ scrollTop: $('#about-me').offset().top + 1}, 1500);
     });
     
     // Owl carousel
@@ -40,10 +42,11 @@ $(document).ready(function(){
     
     // Let's work together
     $('#msg-form').submit(function(){
-        if(($('#email').val() == "") || ($('textarea').val() == "") || ($('#name').val() == "") || ($('#phone').val() == ""))
+        if(($('#email').val() == "") || ($('textarea').val() == "") || ($('#name').val() == "") || ($('#phone').val() == "") || ($('#topic').val() == ""))
         {
             alert("Uzupełnij wymagane pola");
             return false;
         }
     });
+    
 });

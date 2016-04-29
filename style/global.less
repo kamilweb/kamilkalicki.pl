@@ -102,7 +102,7 @@ canvas {
 }
 
 .particles {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -161,7 +161,7 @@ canvas {
 #hero {
     position: relative;
     color: @white;
-    padding-bottom: 30%;
+    height: 500px;
     background-color: @dark-bg;
     background-image: url(../img/particles.png);
     span {
@@ -172,82 +172,68 @@ canvas {
         top: -50%;
     }
     @media @small {
-        background-image: none;
+        height: 100vh;
         background: transparent;
-    }
-    @media @medium {
-        padding-bottom: 20%;
     }
 }
 
 .lets-code {
     text-align: center;
-    @media @medium {
-        text-align: left;
-        padding-left: 30px;
-    }
+    top: 60px;
     h1 {
-        font-size: 40px;
-        margin-top: 80px;
+        text-transform: uppercase;
+        font-size: 26px;
         @media @small {
-            font-size: 60px;
-            margin-top: 120px;
-        }
-        @media @medium {
-            font-size: 80px;
-            margin-top: 120px;
+            font-size: 40px;
         }
         @media @large {
-            font-size: 100px;
-            margin-top: 160px;
+            font-size: 60px;
         }
     }
     p {
-        color: darken(@white, 40%);
+        color: #616266;
         font-size: 12px;
-        margin-top: 20px;
+        margin-top: 10px;
         @media @small {
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        @media @medium {
             font-size: 16px;
             margin-top: 20px;
         }
         @media @large {
             font-size: 18px;
-            margin-top: 30px;
         }
+    }
+    @media @small {
+        padding-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 }
 
-#check-out {
+.blue-btn {
         .lato;
+        text-transform: uppercase;
         color: @white;
         position: relative;
-        bottom: 15%;
-        line-height: 38px;
-        font-size: 14px;
+        font-size: 12px;
         display: block;
         width: 150px;
         height: 38px;
         background: @blue;
-        margin: 30px auto 0 auto;
+        margin: 30px auto 50px auto;
         text-decoration: none;
         text-align: center;
         outline: none;
         border: none;
+        z-index: 1;
         .transition-fast;
         @media @small {
-            margin-top: 30px;
-        }
-        @media @medium {
-            margin-left: 0;
             margin-top: 40px;
             width: 200px;
             height: 50px;
             line-height: 50px;
-            font-size: 18px;
+            font-size: 14px;
         }
         @media @large {
             margin-top: 50px;
@@ -255,7 +241,6 @@ canvas {
         &:hover {
             color: @blue;
             background: transparent;
-            z-index: 1;
         }
         &:after {
             content: '';
@@ -278,15 +263,24 @@ canvas {
     position: absolute;
     left: 50%;
     bottom: 10%;
-    font-size: 30px;
-    margin-left: -10px;
+    margin-left: -15px;
     cursor: pointer;
     display: block;
-    color: @white;
-    .transition;
-    @media @large {
-        bottom: 13%;
-    }
+    width: 30px;
+    animation: arrowdown 1.4s infinite;
+    -webkit-animation: arrowdown 1.4s infinite;
+}
+
+@-webkit-keyframes arrowdown {
+    0% {bottom: 10%;}
+    50% {bottom: 8%;}
+    100% {bottom: 10%;}
+}
+
+@keyframes arrowdown {
+    0% {bottom: 10%;}
+    50% {bottom: 8%;}
+    100% {bottom: 10%;}
 }
 
 // About me
@@ -555,6 +549,7 @@ canvas {
         font-size: 12px;
         text-transform: uppercase;
         border-bottom: 1px solid @form-grey;
+        .transition-fast;
         &:focus {
             color: @white;
             border-bottom: 1px solid @blue;
@@ -605,16 +600,6 @@ textarea:-ms-input-placeholder {
 color: @form-grey;  
 }
 
-#form-btn {
-    color: @white;
-    background: @blue;
-    border: none;
-    padding: 10px;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    .transition-fast;
-    &:hover {
-        background: @white;
-        color: @blue;
-    }
+.red-line {
+    border-bottom: 1px solid red;
 }
