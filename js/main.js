@@ -33,7 +33,9 @@ $(document).ready(function(){
     
     $('#msg-form').submit(function(){
         
+
         var redBtn = $('#msg-form .blue-btn').addClass('red-btn');
+
         
         if($('#email').val() == ""){
             $('#email').addClass('red-line');
@@ -63,7 +65,9 @@ $(document).ready(function(){
 
     $('#lets-work').click(function(){
         $('.msg-input, textarea').removeClass('red-line');
+
         $('#msg-form .blue-btn').removeClass('red-btn');
+
     });
     
     
