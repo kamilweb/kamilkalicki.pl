@@ -1,4 +1,5 @@
 body {
+    height: 100% !important;
     .montserrat;
     p, a {
         .lato;
@@ -42,7 +43,6 @@ body {
         top: 0;
 	    border-top: 101vh solid @grey-bg;
 	    border-right: 101vw solid transparent;
-        .transition;
     }
 
     #preloader-right {
@@ -50,16 +50,11 @@ body {
         bottom: 0;
         border-left: 101vw solid transparent;
 	    border-bottom: 101vh solid @grey-bg;
-        .transition;
-    }
-    
-    .preloader-hide {
-        border-width: 0 !important;
     }
 
     #logo-box {
         position: fixed;
-        top: 20%;
+        top: -10%;
         left: 50%;
         transform: translate(-50%,-50%);
         width: 400px;
@@ -121,45 +116,12 @@ canvas {
     }
 }
 
-.card {
-    font-size: 12px;
-    margin-top: 52px;
-    text-transform: uppercase;
-    @media @small {
-        margin-top: 82px;
-        font-size: 16px;
-    }
-    ul {
-        width: 420px;
-        float: left;
-        margin: 0;
-        padding: 0;
-        li {
-            display: inline-block;
-            color: @white;
-            margin: 0 0 20px 20px;
-        }
-        li:nth-child(3) {
-            text-transform: none;
-        }
-    }
-}
-
-#msg-icon {
-    color: @blue;
-    text-decoration: none;
-    .transition-fast;
-    font-size: 24px;
-    margin-right: 5px;
-    cursor: pointer;
-    &:hover {
-        color: @white;
-    }
-}
 
 // Hero bottom
 #hero {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
     color: @white;
     height: 500px;
     background-color: @dark-bg;
@@ -287,10 +249,13 @@ canvas {
 #about-me {
     background: @white;
     position: relative;
+    width: 100%;
+    margin-top: 500px;
     height: 1200px;
     overflow: hidden;
     @media @small {
         height: 800px;
+        margin-top: 100vh;
     }
     @media @medium {
         height: 1108px;
@@ -391,37 +356,6 @@ canvas {
     @media only screen and (min-width: 1700px) {
         left: -8%;
     }
-}
-
-.slider-box {
-    height: 140px;
-    margin-top: 40px;
-    padding: 6px 0;
-    box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
-    @media @small {
-        margin-top: 160px;
-    }
-    @media @medium {
-        margin-top: 250px;
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        li {
-            cursor: grab;
-            position: relative;
-        }
-    }
-}
-
-.owl-carousel {
-    height: 128px;
-}
-
-.center-slide {
-    margin-top: 50%;
-    transform: translateY(-50%);
 }
 
 .foto {
@@ -562,6 +496,12 @@ canvas {
     }
 }
 
+#topic:focus {
+    @media @small {
+        width: 41.66666667%;
+    }
+}
+
 textarea {
     resize: none;
     height: 100px;
@@ -601,5 +541,25 @@ color: @form-grey;
 }
 
 .red-line {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid red !important;
+}
+
+.red-btn {
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: 'Uzupełnij brakujące pola!';
+        text-transform: none;
+        z-index: 1;
+        background: red !important;
+        color: white;
+        line-height: 38px;
+        @media @small {
+            line-height: 50px;
+        }
+    }
+    
 }
