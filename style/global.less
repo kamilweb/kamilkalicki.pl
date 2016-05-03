@@ -260,6 +260,17 @@ canvas {
     @media @medium {
         height: 1108px;
     }
+    p:first-of-type {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+    p {
+        line-height: 24px;
+        margin-top: 20px;
+    }
 }
 
 .section-header {
@@ -359,37 +370,183 @@ canvas {
 }
 
 .foto {
-    margin-top: 220px;
-    @media only screen and (min-width: 400px) and (max-width: 700px) {
-        margin-top: 140px;
+    position: absolute;
+    bottom: 280px;
+    text-align: center;
+    @media @small {
+        right: 10%;
+        bottom: 60px;
     }
-    @media only screen and (min-width: 701px) {
-        margin-top: 100px;
-    }
-    @media only screen and (min-width: 850px) and (max-width: 991px) {
-        margin-top: 80px;
+    @media @medium {
+        right: 15%;
+        bottom: 160px;
     }
     img {
         box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
         width: 100%;
-        @media @small {
+        max-height: 334px;
+        @media only screen and (min-width: 540px) {
             width: 300px;
         }
-        @media @medium {
-            width: 400px;
-            }
+        @media @small {
+            width: 250px;
         }
+        @media @medium {
+            width: 334px;
+        }
+    }
 }
+
+#anim-box-contener {
+    position: absolute;
+    bottom: 240px;
+    @media @small {
+        left: 20%;
+        bottom: 260px;
+    }
+    @media @medium {
+        left: 10%;
+        margin-left: 136px;
+    }
+    @media @large {
+        left: 15%;
+    }
+}
+
+.stage {
+    width: @box-size;
+    height: @box-size;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    @media @small {
+        margin-left: 0;
+        left: 0;
+    }
+}
+
+/* http://www.the-art-of-web.com/css/3d-transforms/  3d cube */
+
+  @-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16%      { -webkit-transform: rotateY(-90deg);                           }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+    50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+    66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+    83%      { -webkit-transform: rotateX(90deg);                            }
+  }
+
+  @keyframes spincube {
+    from,to {
+      -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      -moz-transform: rotateY(-90deg);
+      -ms-transform: rotateY(-90deg);
+      transform: rotateY(-90deg);
+    }
+    33% {
+      -moz-transform: rotateY(-90deg) rotateZ(90deg);
+      -ms-transform: rotateY(-90deg) rotateZ(90deg);
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+      -moz-transform: rotateY(-180deg) rotateZ(90deg);
+      -ms-transform: rotateY(-180deg) rotateZ(90deg);
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      -moz-transform: rotateY(-270deg) rotateX(90deg);
+      -ms-transform: rotateY(-270deg) rotateX(90deg);
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      -moz-transform: rotateX(90deg);
+      -ms-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+    }
+  }
+
+  .cubespinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: @box-size/2 @box-size/2 0;
+    -moz-transform-origin: @box-size/2 @box-size/2 0;
+    -ms-transform-origin: @box-size/2 @box-size/2 0;
+    transform-origin: @box-size/2 @box-size/2 0;
+  }
+
+  .cubespinner div {
+    position: absolute;
+    width: @box-size;
+    height: @box-size;
+    background: @white;
+    line-height: @box-size;
+    box-shadow: 0 0 30px -14px #000;
+      img {
+          width: @box-size;
+          height: @box-size;
+      }
+  }
+
+  .cubespinner .face1 {
+    -webkit-transform: translateZ(@box-size/2);
+    -moz-transform: translateZ(@box-size/2);    
+    -ms-transform: translateZ(@box-size/2);
+    transform: translateZ(@box-size/2);
+  }
+  .cubespinner .face2 {
+    -webkit-transform: rotateY(90deg) translateZ(@box-size/2);
+    -moz-transform: rotateY(90deg) translateZ(@box-size/2);
+    -ms-transform: rotateY(90deg) translateZ(@box-size/2);
+    transform: rotateY(90deg) translateZ(@box-size/2);
+  }
+  .cubespinner .face3 {
+    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(@box-size/2);
+    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(@box-size/2);
+    -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(@box-size/2);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(@box-size/2);
+  }
+  .cubespinner .face4 {
+    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(@box-size/2);
+    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(@box-size/2);
+    -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(@box-size/2);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(@box-size/2);
+  }
+  .cubespinner .face5 {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(@box-size/2);
+    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(@box-size/2);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(@box-size/2);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(@box-size/2);
+  }
+  .cubespinner .face6 {
+    -webkit-transform: rotateX(-90deg) translateZ(@box-size/2);
+    -moz-transform: rotateX(-90deg) translateZ(@box-size/2);
+    -ms-transform: rotateX(-90deg) translateZ(@box-size/2);
+    transform: rotateX(-90deg) translateZ(@box-size/2);
+  }
+
 
 // Social links
 #social-links {
     background: @grey-bg;
     position: relative;
-    padding-top: 40px;
     z-index: 1;
-    @media only screen and (max-width: 570px) {
-        margin-top: -20%;
-    }
 }
 
 .social-link {

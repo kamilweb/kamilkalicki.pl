@@ -21,7 +21,7 @@ $(document).ready(function(){
     
 // Main
     $('#arrow-down, #check-out').click(function(){
-        $('html, body').animate({ scrollTop: $('#about-me').offset().top + 1}, 1500);
+        $('html, body').animate({ scrollTop: $('#about-me').offset().top + 1}, 2000);
     });
     
 // Skrollr 
@@ -57,7 +57,7 @@ $(document).ready(function(){
             $('textarea').addClass('red-line');
             redBtn
         }
-        if(($('textarea').val() == "") || ($('#name').val() == "") ||                   ($('#topic').val() == "") || ($('#phone').val() == "") ||                   ($('#email').val() == "") ) {
+        if(($('textarea').val() == "") || ($('#name').val() == "") || ($('#topic').val() == "") || ($('#phone').val() == "") || ($('#email').val() == "") ) {
             return false
         };   
     });
