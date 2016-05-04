@@ -1,0 +1,178 @@
+// Particles bg for hero
+canvas {
+    display: block;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: @dark-bg;
+    z-index: -1;
+}
+
+// Hero top
+.logo {
+    padding-top: 20px;
+    text-align: center;
+    @media @medium {
+        padding: 50px 0 0 30px;
+        text-align: left;
+    }
+}
+
+#hero h4 {
+    position: relative;
+    float: right;
+    text-transform: uppercase;
+    margin-top: 84px;
+    cursor: pointer;
+    margin-right: 60px;
+    display: inline-block;
+    font-size: 16px;
+    padding-bottom: 4px;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            border: none;
+            .transition-fast;
+        }
+        &:hover:after {
+            left: 0;
+            border: 1px solid @blue;
+            width: 100%;
+        }
+}
+
+
+// Hero bottom
+#hero {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: @white;
+    height: 500px;
+    background-color: @dark-bg;
+    background-image: url(../img/particles.png);
+    span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 46%, rgba(255,255,255,0) 100%);
+        top: -50%;
+    }
+    @media @small {
+        height: 100vh;
+        background: transparent;
+    }
+}
+
+.lets-code {
+    text-align: center;
+    top: 60px;
+    h1 {
+        text-transform: uppercase;
+        font-size: 26px;
+        margin-bottom: 0;
+        @media @small {
+            font-size: 40px;
+        }
+        @media @large {
+            font-size: 60px;
+        }
+    }
+    p {
+        color: #616266;
+        font-size: 12px;
+        @media @small {
+            font-size: 16px;
+        }
+        @media @large {
+            font-size: 18px;
+        }
+    }
+    @media @small {
+        padding-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.blue-btn {
+        .lato;
+        text-transform: uppercase;
+        color: @white;
+        position: relative;
+        font-size: 12px;
+        display: block;
+        width: 150px;
+        height: 38px;
+        background: @blue;
+        margin: 30px auto 100px auto;
+        text-decoration: none;
+        text-align: center;
+        outline: none;
+        border: none;
+        z-index: 1;
+        .transition-fast;
+        @media @small {
+            margin-top: 40px;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+        }
+        @media @large {
+            margin-top: 50px;
+        }
+        &:hover {
+            color: @blue;
+            background: transparent;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            z-index: -1;
+            border: none;
+            .transition-fast;
+        }
+        &:hover:after {
+            width: 100%;
+            background: @white;
+        }
+}
+
+#arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    margin-left: -15px;
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    animation: arrowdown 1.4s infinite;
+    -webkit-animation: arrowdown 1.4s infinite;
+}
+
+@-webkit-keyframes arrowdown {
+    0% {bottom: 10%;}
+    50% {bottom: 8%;}
+    100% {bottom: 10%;}
+}
+
+@keyframes arrowdown {
+    0% {bottom: 10%;}
+    50% {bottom: 8%;}
+    100% {bottom: 10%;}
+}

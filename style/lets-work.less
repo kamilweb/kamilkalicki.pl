@@ -1,0 +1,102 @@
+// Let's work section
+#lets-work {
+    background: @dark-bg;
+    position: relative;
+    form {
+        margin-top: 60px;
+    }
+    
+    .msg-input, textarea {
+        background: @dark-bg;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        color: @white;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-bottom: 1px solid @form-grey;
+        .transition-fast;
+        &:focus {
+            color: @white;
+            border-bottom: 1px solid @blue;
+            font-weight: normal;
+        }
+    }
+    .msg-input {
+        padding: 10px;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 767px) {
+        &:focus {
+            width: 33.3%;
+        }
+        }
+    }
+}
+
+#topic:focus {
+    @media @small {
+        width: 41.66666667%;
+    }
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    padding: 10px !important;
+}
+
+input::-webkit-input-placeholder {
+color: @form-grey;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: @form-grey;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: @form-grey;  
+}
+ 
+input:-ms-input-placeholder {  
+color: @form-grey;  
+}
+
+textarea::-webkit-input-placeholder {
+color: @form-grey;
+}
+ 
+textarea:-moz-placeholder { /* Firefox 18- */
+color: @form-grey;  
+}
+ 
+textarea::-moz-placeholder {  /* Firefox 19+ */
+color: @form-grey;  
+}
+ 
+textarea:-ms-input-placeholder {  
+color: @form-grey;  
+}
+
+.red-line {
+    border-bottom: 1px solid red !important;
+}
+
+.red-btn {
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: 'Uzupełnij brakujące pola!';
+        text-transform: none;
+        z-index: 1;
+        background: red !important;
+        color: white;
+        line-height: 38px;
+        @media @small {
+            line-height: 50px;
+        }
+    }
+    
+}

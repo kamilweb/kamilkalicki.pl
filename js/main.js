@@ -20,8 +20,12 @@ $(document).ready(function(){
     
     
 // Main
-    $('#arrow-down, #check-out').click(function(){
+    $('#arrow-down, #check-out, #about-me-link').click(function(){
         $('html, body').animate({ scrollTop: $('#about-me').offset().top + 1}, 2000);
+    });
+    
+    $('#kontakt').click(function(){
+        $('html, body').animate({ scrollTop: $('#lets-work').offset().top}, 3000);
     });
     
 // Skrollr 
