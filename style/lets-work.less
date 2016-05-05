@@ -57,8 +57,10 @@ input::-moz-placeholder {  /* Firefox 19+ */
 color: @form-grey;  
 }
  
-input:-ms-input-placeholder {  
-color: @form-grey;  
+#topic, #name, #phone, #email {  
+    &:-ms-input-placeholder {
+    color: @form-grey;  
+    }
 }
 
 textarea::-webkit-input-placeholder {
@@ -73,7 +75,7 @@ textarea::-moz-placeholder {  /* Firefox 19+ */
 color: @form-grey;  
 }
  
-textarea:-ms-input-placeholder {  
+#textarea:-ms-input-placeholder {  
 color: @form-grey;  
 }
 

@@ -72,7 +72,7 @@
     border: 16px solid @grey-header;
     top: 240px;
     left: 10%;
-    box-shadow: 0px 0px 30px -14px rgba(0,0,0,1);
+    .box-shadow;
     @media @small {
         left: 20%;
     }
@@ -122,8 +122,11 @@
 
 .foto {
     position: absolute;
-    bottom: 170px;
     text-align: center;
+    @media only screen and (max-width: 400px) {
+        bottom: 170px;
+    }
+    bottom: 260px;
     @media @small {
         right: 5%;
         bottom: 30px;
@@ -133,7 +136,7 @@
         bottom: 160px;
     }
     img {
-        box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
+        .box-shadow;
         width: 100%;
         max-height: 334px;
         @media only screen and (min-width: 540px) {
@@ -150,12 +153,15 @@
 
 #about-me-box {
     position: absolute;
-    bottom: 60px;
+    bottom: 105px;
     height: 50px;
     width: 300px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0px 0px 40px -14px rgba(0,0,0,1);
+    .box-shadow;
+    @media only screen and (max-width: 400px) {
+            bottom: 60px;
+        }
     @media @small {
         bottom: 80px;
         left: 5%;
@@ -172,11 +178,8 @@
         width: 500px;
     }
     div {
-        margin: 0 auto;
         text-align: center;
         p {
-            padding: 0;
-            display: inline-block;
             font-size: 12px;
             line-height: 50px;
             text-transform: uppercase;

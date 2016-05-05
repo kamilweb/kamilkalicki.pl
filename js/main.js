@@ -28,6 +28,13 @@ $(document).ready(function(){
         $('html, body').animate({ scrollTop: $('#lets-work').offset().top}, 3000);
     });
     
+    // Owl-carousel
+    $(".owl-carousel").owlCarousel({
+        items: 4,
+        autoplay: true,
+        loop: true,
+    });
+    
 // Skrollr 
     if($(window).width() >= 768){
         var s = skrollr.init();
