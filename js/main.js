@@ -50,31 +50,24 @@ $(document).ready(function(){
         
         if($('#email').val() == ""){
             $('#email').addClass('red-line');
-            redBtn
         }
         if($('#name').val() == ""){
             $('#name').addClass('red-line');
-            redBtn
-        }
-        if($('#phone').val() == ""){
-            $('#phone').addClass('red-line');
-            redBtn
         }
         if($('#topic').val() == ""){
             $('#topic').addClass('red-line');
-            redBtn
         }
         if($('textarea').val() == ""){
             $('textarea').addClass('red-line');
-            redBtn
         }
-        if(($('textarea').val() == "") || ($('#name').val() == "") || ($('#topic').val() == "") || ($('#phone').val() == "") || ($('#email').val() == "") ) {
+        if(($('textarea').val() == "") || ($('#name').val() == "") || ($('#topic').val() == "") || ($('#email').val() == "") ) {
+            redBtn
             return false
         };   
     });
     
 
-    $('#lets-work').click(function(){
+    $('body').click(function(){
         $('.msg-input, textarea').removeClass('red-line');
 
         $('#msg-form .blue-btn').removeClass('red-btn');

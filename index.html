@@ -98,7 +98,7 @@
                     <article>
                         <h2>Kamil Kalicki</h2>
                         <p>Początkujący Front-end developer z wielkimi ambicjami</p>
-                        <p>Od kiedy po raz pierwszy zasiadłem do kursu HTML/CSS poczułem, że to coś dla mnie. Minął prawie rok, a ja dalej poszerzam swoją wiedzę z dziedziny front-endu i czuję, że domowe zacisze już mi nie wystarcza. Chciałbym móc realizować duże i zaawansowane projekty, bo jestem świadom, że dzięki nim będę rozwijał się jeszcze szybciej. Największą frajdę sprawia mi tworzenie elementów interaktywnych. Jestem gotów wesprzeć team i uczyć się od najlepszych. Do tej pory opanowałem HTML5, CSS3, Bootstrap i Less na poziomie średniozaawansowanym, a jQuery, Sass, Git i Photoshop na poziomie podstawowym. </p>
+                        <p>Od kiedy po raz pierwszy zasiadłem do kursu HTML/CSS poczułem, że to coś dla mnie. Minął prawie rok, a ja dalej poszerzam swoją wiedzę z dziedziny front-endu. Codziennie odkrywam fascynujące aspekty kodowania stron internetowych. Najbardziej lubię tworzyć elementy interaktywne, pozwalające użytkownikowi czerpać przyjemność z przeglądania www.<br>Od czerwca rozpoczynam pracę w firmie Daftcode, gdzie będę tworzyć świetne strony i rozwijać swoje umiejętności.</p>
                     </article>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                                 </div>
                     </section>
                     <div class="foto col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0">
-                        <img src="img/ninja.jpeg" alt="ninja">
+                        <img src="img/foteczka.png" alt="Kamil Kalicki">
                     </div>
                 </div>
             </div>
@@ -150,12 +150,12 @@
                  </div>
             </div>
             <div class="row">
-                <form id="msg-form" method="post">
-                    <input id="name" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-2" type="text" placeholder="Imię i nazwisko">
-                    <input id="email" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-1" type="email" placeholder="E-mail">
-                    <input id="phone" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-1" type="tel" placeholder="Numer telefonu">
-                    <input id="topic" class="msg-input col-xs-8 col-xs-offset-2" type="text" placeholder="Temat">
-                    <textarea id="textarea" class="col-xs-8 col-xs-offset-2" placeholder="Wiadomość"></textarea>
+                <form id="msg-form" method="post" action="contact-form-handler.php"  accept-charset="UTF-8">
+                    <input id="name" name="name" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-2" type="text" placeholder="Imię i nazwisko">
+                    <input id="email" name="email" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-1" type="email" placeholder="E-MAIL">
+                    <input id="phone" name="phone" class="msg-input col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-1" type="tel" placeholder="Numer telefonu">
+                    <input id="topic" name="topic" class="msg-input col-xs-8 col-xs-offset-2" type="text" placeholder="TEMAT">
+                    <textarea id="textarea" name="textarea" class="col-xs-8 col-xs-offset-2" placeholder="WIADOMOŚĆ"></textarea>
                     <div class="col-xs-12">
                         <button class="blue-btn" type="submit">Napisz do mnie</button>
                     </div>
